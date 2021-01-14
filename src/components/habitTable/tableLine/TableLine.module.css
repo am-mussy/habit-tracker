@@ -1,0 +1,23 @@
+.main {
+  display: grid;
+  grid-template-columns: 2fr repeat(30, 1fr);
+  background-color: rgb(245, 113, 4);
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  height: 30px;
+}
+
+.main input {
+  height: 30px;
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}

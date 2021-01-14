@@ -1,16 +1,30 @@
 import React from "react";
+import s from "./Create.module.css";
 
 const Create = () => {
   return (
-    <div>
-      <p>User name</p>
-      <input type="text" />
-      <p>Password</p>
-      <input type="text" />
-      <input type="text" />
-      <p>Phone number</p>
-      <input type="text" />
-      <button>sign in</button>
+    <div className={s.main}>
+      <form>
+        <p className={s.p}>Welcome, my friend</p>
+        <p className={s.pSmall}>Who are you?</p>
+        <input placeholder="Your name" className={s.input} type="text" />
+        <input placeholder="Your email" className={s.input} type="email" />
+
+        <input placeholder="Password" className={s.input} type="password" />
+        <input
+          placeholder="Password again"
+          className={s.input}
+          type="password"
+        />
+
+        <input
+          placeholder="You'r phone number"
+          className={s.input}
+          type="tel"
+          pattern="[0-9]{10}"
+        />
+        <button className={s.button}>CREATE</button>
+      </form>
     </div>
   );
 };

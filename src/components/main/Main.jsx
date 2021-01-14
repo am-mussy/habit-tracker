@@ -10,6 +10,9 @@ const Main = () => {
       <NavLink to="/create">
         <button>create</button>
       </NavLink>
+      <NavLink to="/table">
+        <button>table</button>
+      </NavLink>
     </div>
   );
 };
