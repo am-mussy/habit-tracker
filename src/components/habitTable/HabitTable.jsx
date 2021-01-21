@@ -1,22 +1,21 @@
 import React from "react";
 import s from "./HabitTable.module.css";
-import TableLine from "./tableLine/TableLine";
+import TableLine from "./HabitLine/TableLine";
+import DateLine from "./DateLine/DateLine";
 
-function addLine() {
-  console.log("Line added");
-  AllLines.push(`<TableLine />`);
-  console.log(AllLines);
-}
-
-let AllLines = [<TableLine />, <TableLine />];
+let AllLines = [
+  <TableLine habit={"do anal"} />,
+  <TableLine habit={"Оджумания"} />,
+];
 
 const HabitTable = () => {
   return (
     <div>
-      <button id="addLine" onClick={addLine}>
-        add
-      </button>
-      <div className={s.main}>{AllLines}</div>
+      <div></div>
+      <div className={s.habitLine}>
+        <DateLine />
+        {AllLines}
+      </div>
     </div>
   );
 };

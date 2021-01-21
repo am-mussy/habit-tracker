@@ -1,4 +1,9 @@
 .main {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+}
+
+.habitLine {
   margin-left: auto;
   margin-right: auto;
   width: 90%;

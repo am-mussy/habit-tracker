@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./CheckBox.module.css";
 
-const CheckBox = () => {
+const CheckBox = (props) => {
   return (
-    <div className={s.main}>
-      <input type="checkbox" name="" id="" />
+    <div>
+      <input type="checkbox" className={s.main} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-columns: 2fr repeat(30, 1fr);
+  grid-template-columns: 2fr repeat(31, 1fr);
   background-color: rgb(245, 113, 4);
   font-size: 15px;
   margin-top: 5px;
