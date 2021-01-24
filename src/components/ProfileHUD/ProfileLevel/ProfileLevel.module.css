@@ -1,0 +1,21 @@
+.main {
+  background-color: #fbc531;
+  width: 25px;
+  height: 25px;
+
+  text-align: center;
+  font-size: 100%;
+  border-radius: 100%;
+  padding-top: 5px;
+
+  -moz-transform: translate(30px, 40px);
+  -webkit-transform: translate(30px, 40px);
+  -o-transform: translate(30px, 40px);
+  -ms-transform: translate(30px, 40px);
+  transform: translate(30px, 40px);
+}
+
+.level {
+  width: 25px;
+  height: 25px;
+}

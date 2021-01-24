@@ -1,0 +1,11 @@
+.main {
+  margin-left: 89%;
+  text-align: center;
+  height: 250px;
+  width: 200px;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
