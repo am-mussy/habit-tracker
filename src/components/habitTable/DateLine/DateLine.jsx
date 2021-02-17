@@ -8,12 +8,12 @@ import s from "./DateLine.module.css";
 //
 // Формируем компоненту дат - шапка таблицы
 
-let dateLine = [];
-for (let i = 0; i < 31; i++) {
-  dateLine.push(<DateСell date={i + 1} />);
-}
-
 const DateLine = (props) => {
+  let dateLine = [];
+  for (let i = 0; i < props.days; i++) {
+    dateLine.push(<DateСell date={i + 1} />);
+  }
+
   return (
     <div className={s.main}>
       <p>Dates</p>

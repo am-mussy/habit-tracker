@@ -7,7 +7,9 @@ import Main from "./components/main/Main";
 import HabitTable from "./components/habitTable/HabitTable";
 
 
-function App() {
+
+
+function App(props) {
 
   return (
     <BrowserRouter>
@@ -15,7 +17,7 @@ function App() {
         <Route exact path='/' component={Main} />
         <Route path='/signin' component={Signin} />
         <Route path='/create' component={Create} />
-        <Route path='/table' component={HabitTable} />
+        <Route path='/table' render={() => <HabitTable state={props.state} />} />
       </div>
     </BrowserRouter>
   );

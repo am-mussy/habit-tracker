@@ -8,13 +8,17 @@ import s from "./TableLine.module.css";
 //
 // Формируем компоненту привычки из Названия и чек-боксов
 
-let habitLine = [];
-
-for (let i = 0; i < 31; i++) {
-  habitLine.push(<CheckBox />);
-}
-
 const TableLine = (props) => {
+  let habitLine = [];
+
+  for (let i = 0; i < props.days; i++) {
+    if (props.progress[i]) {
+      habitLine.push(<CheckBox isChecked={true} />);
+    } else {
+      habitLine.push(<CheckBox />);
+    }
+  }
+
   return (
     <div className={s.main}>
       <p>{props.habit}</p>

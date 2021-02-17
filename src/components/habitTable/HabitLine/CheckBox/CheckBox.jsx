@@ -2,9 +2,10 @@ import React from "react";
 import s from "./CheckBox.module.css";
 
 const CheckBox = (props) => {
+  
   return (
     <div>
-      <input type="checkbox" className={s.main} />
+      <input checked={props.isChecked} type="checkbox" className={s.main} />
     </div>
   );
 };
