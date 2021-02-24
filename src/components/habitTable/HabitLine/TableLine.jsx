@@ -13,9 +13,20 @@ const TableLine = (props) => {
 
   for (let i = 0; i < props.days; i++) {
     if (props.progress[i]) {
-      habitLine.push(<CheckBox isChecked={true} />);
+      habitLine.push(
+        <CheckBox
+          isChecked={true}
+          id={`${props.habit} ${i}`}
+          changeCheckBox={props.changeCheckBox}
+        />
+      );
     } else {
-      habitLine.push(<CheckBox />);
+      habitLine.push(
+        <CheckBox
+          id={`${props.habit} ${i}`}
+          changeCheckBox={props.changeCheckBox}
+        />
+      );
     }
   }
 

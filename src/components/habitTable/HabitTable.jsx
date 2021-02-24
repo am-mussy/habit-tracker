@@ -6,25 +6,20 @@ import ProfileHUD from "../ProfileHUD/ProfileHUD";
 import Button from "../share/button/Button";
 
 const HabitTable = (props) => {
-  let AllLines = [
-    <TableLine
-      days={props.state.habits[0].days}
-      habit={props.state.habits[0].name}
-      progress={props.state.habits[0].progress}
-    />,
-    <TableLine
-      days={props.state.habits[1].days}
-      habit={props.state.habits[1].name}
-      progress={props.state.habits[1].progress}
-    />,
-  ];
+  let AllLines = [];
 
-  let butAddHabit = React.createRef();
+  for (let i = 0; i < props.state.habits.length; i++) {
+    AllLines.push(
+      <TableLine
+        changeCheckBox={props.changeCheckBox}
+        days={props.state.habits[i].days}
+        habit={props.state.habits[i].name}
+        progress={props.state.habits[i].progress}
+      />
+    );
+  }
 
-  let fuckOff = () => {
-    window.alert(butAddHabit.current.value);
-  };
-
+  console.log(props);
   return (
     <div>
       <div className={s.habitLine}>
@@ -32,7 +27,10 @@ const HabitTable = (props) => {
         <DateLine days={props.state.monthData.days} />
         {AllLines}
         <Button
-          onClickCustom={fuckOff}
+          onClickCustom={() => {
+            console.log("klick");
+            props.addHabit("dev");
+          }}
           butName={"Add habit"}
           butClassName={"addHabit"}
         />

@@ -17,7 +17,7 @@ function App(props) {
         <Route exact path='/' component={Main} />
         <Route path='/signin' component={Signin} />
         <Route path='/create' component={Create} />
-        <Route path='/table' render={() => <HabitTable state={props.state} />} />
+        <Route path='/table' render={() => <HabitTable state={props.state} addHabit={props.addHabit} changeCheckBox={props.changeCheckBox} />} />
       </div>
     </BrowserRouter>
   );

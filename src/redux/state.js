@@ -1,15 +1,18 @@
+import { rerender } from "../render"
+
 let state = {
     habits: [
         {
             name: "Бэг",
-            progress: [1, 1, 0, 0, 1],
+            progress: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             days: 31
         },
         {
             name: "Do anal",
-            progress: [1, 1, 1],
+            progress: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             days: 31
-        }
+        },
+
     ],
 
     userData: {
@@ -22,15 +25,42 @@ let state = {
     }
 }
 
-let addHabit = (habit) => {
+export let addHabit = (habit) => {
 
-    let newHabit = {
-        name: "Do anal",
-        progress: [1, 1, 1],
-        days: 31
+    let progress = []
+
+    for (let i = 0; i < 31; i++) {
+        progress.push(0)
     }
 
-    state.habits.push(habit)
+    state.habits.push(
+        {
+            name: habit,
+            progress: progress,
+            days: 31
+        }
+    )
+    rerender(state)
+}
+
+export let changeCheckBox = (id) => {
+
+    for (let i = 0; i < state.habits.length; i++) {
+
+        console.log(state.habits[i].name === id.split(' ')[0])
+        console.log(state.habits[i].name, id.split(' ')[0])
+        if (state.habits[i].name === id.split(' ')[0]) {
+
+
+            if (state.habits[i].progress[id.split(' ')[1]] === 0) {
+                state.habits[i].progress[id.split(' ')[1]] = 1
+            } else {
+                state.habits[i].progress[id.split(' ')[1]] = 0
+            }
+        }
+    }
+
+    rerender(state)
 }
 
 export default state
