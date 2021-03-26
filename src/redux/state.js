@@ -1,4 +1,6 @@
-import { rerender } from "../render"
+let rerender = () => {
+    console.log('render state')
+}
 
 let state = {
     habits: [
@@ -40,7 +42,7 @@ export let addHabit = (habit) => {
             days: 31
         }
     )
-    rerender(state)
+    rerender()
 }
 
 export let changeCheckBox = (id) => {
@@ -60,7 +62,11 @@ export let changeCheckBox = (id) => {
         }
     }
 
-    rerender(state)
+    rerender()
+}
+
+export const subscrabe = (observer) => {
+    rerender = observer
 }
 
 export default state
