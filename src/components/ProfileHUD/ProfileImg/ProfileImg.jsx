@@ -2,9 +2,9 @@ import React from "react";
 import s from "./ProfileImg.module.css";
 //Вынести в стек будут рандомные изображения
 let img = {
-  lion: "http://aydogan.ru/img/lion.png",
-  cat: "http://aydogan.ru/img/cat.png",
-  rabbit: "http://aydogan.ru/img/rabbit.png",
+  lion: '',
+  cat: '',
+  rabbit: '',
 };
 
 const ProfileImg = (props) => {

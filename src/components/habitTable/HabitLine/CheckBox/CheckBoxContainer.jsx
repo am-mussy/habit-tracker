@@ -6,8 +6,8 @@ import CheckBox from "./CheckBox"
 
 const CheckBoxContainer = (props) => {
 
-  store
-  console.log(props)
+
+
   let onCheckBoxChange = (id) => {
 
     props.dispatch(checkBoxChangerActionCreator(id));

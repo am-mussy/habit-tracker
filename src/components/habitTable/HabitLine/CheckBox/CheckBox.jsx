@@ -1,11 +1,8 @@
 import React from "react";
+import { checkBoxChangerActionCreator } from "../../../../redux/habit-reducer";
 import s from "./CheckBox.module.css";
 
 const CheckBox = (props) => {
-  let onCheckBoxChange = (id) => {
-    console.log(id);
-    props.changeCheckBox(id);
-  };
 
   let checkBoxRef = React.createRef();
 
@@ -13,7 +10,7 @@ const CheckBox = (props) => {
     <div>
       <input
         onChange={() => {
-          onCheckBoxChange(checkBoxRef.current.id);
+          props.onCheckBoxChange(checkBoxRef.current.id)
         }}
         checked={props.isChecked}
         type="checkbox"
