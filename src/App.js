@@ -11,7 +11,6 @@ import HabitTableContainer from "./components/habitTable/HabitTableContainer";
 
 function App(props) {
 
-  console.log('p', props)
   return (
     <BrowserRouter>
       <div>

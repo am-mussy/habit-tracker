@@ -11,7 +11,7 @@ import s from "./DateLine.module.css";
 const DateLine = (props) => {
   let dateLine = [];
   for (let i = 0; i < props.days; i++) {
-    dateLine.push(<DateСell date={i + 1} />);
+    dateLine.push(<DateСell className={s.cell} key={i + "dayID"} date={i + 1} />);
   }
 
   return (

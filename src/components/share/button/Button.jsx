@@ -3,8 +3,10 @@ import s from "./Button.module.css";
 
 const Button = (props) => {
   return (
-    <div>
-      <button onClick={props.onClickCustom}>{props.butName}</button>
+    <div className={s.main}>
+      <button id={'addHabitBtn'} onClick={props.onClickCustom}></button>
+
+
     </div>
   );
 };

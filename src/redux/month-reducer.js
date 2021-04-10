@@ -9,8 +9,9 @@ const monthReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case CHANGE_MONTH:
-            state.days = action.days
-            break;
+            let stateCopy = { ...state }
+            stateCopy.days = action.days
+            return stateCopy
     }
 
     return state

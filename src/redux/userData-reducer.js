@@ -11,10 +11,12 @@ const userDataReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case CHANGE_USER_DATA:
-            state.level = action.level
-            state.img = action.img
-            state.progress = action.progress
-            break;
+
+            let stateCopy = { ...state }
+            stateCopy.level = action.level
+            stateCopy.img = action.img
+            stateCopy.progress = action.progress
+            return stateCopy
     }
 
     return state

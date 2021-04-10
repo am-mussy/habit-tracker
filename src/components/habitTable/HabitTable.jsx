@@ -1,9 +1,10 @@
 import React from "react";
 import s from "./HabitTable.module.css";
 import DateLine from "./DateLine/DateLine";
-import ProfileHUD from "../ProfileHUD/ProfileHUD";
 import Button from "../share/button/Button";
 import TableLine from "./HabitLine/TableLine";
+
+import TableLineContainer from "./HabitLine/TableLineContainer";
 
 
 const HabitTable = (props) => {
@@ -13,30 +14,33 @@ const HabitTable = (props) => {
   for (let i = 0; i < props.habits.length; i++) {
 
     AllLines.push(
-      <TableLine
-        dispatch={props.store.dispatch} //заменить или убрать
-        days={props.habits[i].days}
+      <TableLineContainer
         habit={props.habits[i].name}
-        progress={props.habits[i].progress}
+        key={props.habits[i].name + "id"}
       />
     );
   }
 
-
   return (
-    <div>
+    <div className={s.habitTableMain}>
+
       <div className={s.habitLine}>
-        <ProfileHUD hudData={props.hudData} />
+
+        {/* <ProfileHUD hudData={props.hudData} /> */}
         <DateLine days={props.days} />
         {AllLines}
         <Button
+
           onClickCustom={() => {
-            props.addHabit()
+            // props.addHabit()
+            props.showaAddHabitModalWindow()
           }}
           butName={"Add habit"}
           butClassName={"addHabit"}
         />
       </div>
+      {props.addHabitModalContainer}
+
     </div>
   );
 };

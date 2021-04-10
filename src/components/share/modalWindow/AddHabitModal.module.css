@@ -1,0 +1,69 @@
+@font-face {
+    font-family: '20451FONT';
+    src: url('../../../fonts/20451.ttf');
+  }
+
+
+.main {
+    position: relative;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.644);
+    
+    padding-top: 5%;
+    padding-bottom: 95%;
+
+}
+
+.modalWindow {
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: '20451FONT';
+    width: 300px;
+    height: 200px;
+    border: 2.5px dotted #161616;
+    background-color: #fffbe8;
+}
+
+.modalWindow input {
+
+    font-weight: bold;
+    display: block;
+    width: 250px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    border: 2.5px dotted #161616;
+    text-align: center;
+}
+
+.addHabitBtn {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border: 2.5px dotted #161616;
+}
+
+
+.CloseBtn{
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+
+    width: 20px;
+    height: 20px;
+
+
+    margin: 15px 15px 0 auto;
+
+    transform: rotate(45deg);
+    
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQyNi42NjY2N3B0IiB2aWV3Qm94PSIwIDAgNDI2LjY2NjY3IDQyNi42NjY2NyIgd2lkdGg9IjQyNi42NjY2N3B0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im00MTAuNjY3OTY5IDIyOS4zMzIwMzFoLTM5NC42Njc5NjljLTguODMyMDMxIDAtMTYtNy4xNjc5NjktMTYtMTZzNy4xNjc5NjktMTYgMTYtMTZoMzk0LjY2Nzk2OWM4LjgzMjAzMSAwIDE2IDcuMTY3OTY5IDE2IDE2cy03LjE2Nzk2OSAxNi0xNiAxNnptMCAwIi8+PHBhdGggZD0ibTIxMy4zMzIwMzEgNDI2LjY2Nzk2OWMtOC44MzIwMzEgMC0xNi03LjE2Nzk2OS0xNi0xNnYtMzk0LjY2Nzk2OWMwLTguODMyMDMxIDcuMTY3OTY5LTE2IDE2LTE2czE2IDcuMTY3OTY5IDE2IDE2djM5NC42Njc5NjljMCA4LjgzMjAzMS03LjE2Nzk2OSAxNi0xNiAxNnptMCAwIi8+PC9zdmc+);
+    background-size: 100%;
+
+}

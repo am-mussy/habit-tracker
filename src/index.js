@@ -11,24 +11,27 @@ import { Provider } from 'react-redux';
 
 
 
-let rerender = (state) => {
-    ReactDOM.render(
-        <React.StrictMode>
-            <Provider store={store}>
-                <App />
-                {/* <App store={store} state={store.getState()} dispatch={store.dispatch.bind(store)} /> */}
-            </Provider>
-        </React.StrictMode>,
-        document.getElementById('root')
-    );
-}
+
+ReactDOM.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+            {/* <App store={store} state={store.getState()} dispatch={store.dispatch.bind(store)} /> */}
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
 
 
-rerender(store.getState())
+window.state = store.getState()
+
+
+//Удалить
+// rerender(store.getState())
 
 
 
-store.subscribe(() => {
-    let state = store.getState()
-    rerender(state)
-})
+// store.subscribe(() => {
+//     let state = store.getState()
+//     rerender(state)
+// })

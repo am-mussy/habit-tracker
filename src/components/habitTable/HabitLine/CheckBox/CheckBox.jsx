@@ -7,7 +7,7 @@ const CheckBox = (props) => {
   let checkBoxRef = React.createRef();
 
   return (
-    <div>
+    <div className={s.cell}>
       <input
         onChange={() => {
           props.onCheckBoxChange(checkBoxRef.current.id)
@@ -18,6 +18,7 @@ const CheckBox = (props) => {
         id={props.id}
         ref={checkBoxRef}
       />
+      <label for={props.id} className={s.label}></label>
     </div>
   );
 };

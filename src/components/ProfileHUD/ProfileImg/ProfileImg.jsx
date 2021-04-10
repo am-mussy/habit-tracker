@@ -14,7 +14,7 @@ const ProfileImg = (props) => {
         className={s.userPic}
         src={img[`${props.img}`]}
         alt="userpic"
-        srcset=""
+
       />
     </div>
   );

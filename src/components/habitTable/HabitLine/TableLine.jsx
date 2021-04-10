@@ -9,31 +9,33 @@ import s from "./TableLine.module.css";
 // Формируем компоненту привычки из Названия и чек-боксов
 
 const TableLine = (props) => {
-  let habitLine = [];
+  // let habitLine = [];
 
-  for (let i = 0; i < props.days; i++) {
-    if (props.progress[i]) {
-      habitLine.push(
-        <CheckBoxContainer
-          isChecked={true}
-          id={`${props.habit} ${i}`}
-          dispatch={props.dispatch}
-        />
-      );
-    } else {
-      habitLine.push(
-        <CheckBoxContainer
-          id={`${props.habit} ${i}`}
-          dispatch={props.dispatch}
-        />
-      );
-    }
-  }
+  // for (let i = 0; i < props.days; i++) {
+  //   if (props.progress[i]) {
+  //     habitLine.push(
+  //       <CheckBoxContainer
+  //         isChecked={true}
+  //         id={`${props.habit} ${i}`}
+  //         update={props.update}
+  //         key={`${props.habit} ${i}` + "ID"}
+  //       />
+  //     );
+  //   } else {
+  //     habitLine.push(
+  //       <CheckBoxContainer
+  //         id={`${props.habit} ${i}`}
+  //         update={props.update}
+  //         key={`${props.habit} ${i}` + "ID"}
+  //       />
+  //     );
+  //   }
+  // }
 
   return (
     <div className={s.main}>
       <p>{props.habit}</p>
-      {habitLine}
+      {props.habitLine}
     </div>
   );
 };

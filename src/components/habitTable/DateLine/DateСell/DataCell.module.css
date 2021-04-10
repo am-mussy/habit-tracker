@@ -1,0 +1,12 @@
+@font-face {
+    font-family: '20451FONT';
+    src: url('../../../../fonts/20451.ttf');
+  }
+
+.cell {
+    /* border-left: 2.5px dotted #161616; */
+    font-family: '20451FONT';
+    font-size: 18px;
+    font-weight: bold;
+    
+}

@@ -1,13 +1,29 @@
+/* .backGround {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(90deg, transparent 81px, transparent 84px), linear-gradient(#bbb 1px, transparent 0px), linear-gradient(90deg, #bbb 1px, transparent 0px);
+  background-size: 100% 100%, 20px 20px, 20px 20px;
+  background-position: 0 0, -1px -1px, -1px 1px;
+} */
+
+.habitTableMain{
+  display: block;
+  position:relative;
+  z-index: 0;
+}
+
 .main {
+  
   display: grid;
   grid-template-columns: repeat(30, 1fr);
 }
 
 .habitLine {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+  position: fixed;
 
+  width: 90%;
+  margin-left: 5%;
   display: grid;
   grid-template-columns: 1fr;
 }

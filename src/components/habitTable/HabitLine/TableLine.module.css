@@ -1,16 +1,27 @@
+@font-face {
+  font-family: '20451FONT';
+  src: url('../../../fonts/20451.ttf');
+}
+
+
 .main {
   display: grid;
   grid-template-columns: 2fr repeat(31, 1fr);
-  background-color: rgb(245, 113, 4);
+  border-right: 2.5px dotted #161616;
+  border-left: 2.5px dotted #161616;
+  border-bottom: 2.5px dotted #161616;
   font-size: 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+
 
   height: 30px;
+
+  
 }
 
 .main p {
-  margin-top: 5px;
   margin-bottom: 5px;
   text-align: center;
+  font-family: '20451FONT';
+  font-size: 18px;
+  font-weight: bold;
 }
