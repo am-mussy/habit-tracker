@@ -2,7 +2,7 @@ import React from "react";
 import DateСell from "./DateСell/DateСell";
 import s from "./DateLine.module.css";
 
-// >           1|2|3|4|5|6|7|8|9|10
+// >           1|2|3|4|5|6|7|8|9|10asdasd
 //  HabitName |X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|
 //
 //
@@ -11,7 +11,9 @@ import s from "./DateLine.module.css";
 const DateLine = (props) => {
   let dateLine = [];
   for (let i = 0; i < props.days; i++) {
-    dateLine.push(<DateСell className={s.cell} key={i + "dayID"} date={i + 1} />);
+    dateLine.push(
+      <DateСell className={s.cell} key={i + "dayID"} date={i + 1} />
+    );
   }
 
   return (
